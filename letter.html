@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Letter</title>
+    <style>
+      .letter {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 500;
+        font-size: 30px;
+        padding: 1em;
+      }
+
+      .message {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 500;
+        font-size: 20px;
+        padding: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="letter"></div>
+
+    <script>
+      const div = document.querySelector(".letter");
+      const text = "Dear J.A.,";
+
+      function textTypingEffect(element, text, i = 0) {
+        if (i === 0) {
+          element.textContent = "";
+        }
+
+        element.textContent += text[i];
+
+        // If we reached the end of the string
+        if (i === text.length - 1) {
+          return;
+        }
+
+        setTimeout(() => textTypingEffect(element, text, i + 1), 70);
+      }
+
+      textTypingEffect(div, text);
+    </script>
+
+    <div class="message"></div>
+
+    <script>
+      const divs = document.querySelector(".message");
+      const texts =
+        "                        To be honest with you,    I don't know where to start with this letter    but of course you've probably guessed it already,      this letter is a confession of my feelings :).       I know it's obvious but I still want to do a proper confession hehe.   You see,     I started to confirm that I had feelings for you on November 14, 2023.     I don't know why I allowed myself to like you even though I shouldn't.     It was just...    everything about you that caught my eye. You seemed      different,        in a way that I can't describe.     Everytime I find myself looking at you,     it's like you have your own spotlight,      in my eyes I see you radiating amidst the crowd,     haha it's weird how I kept denying what I feel towards you because I know it's wrong.      I'm probably a shitty friend for liking the same person my friend does but trust me, I tried.      I really tried avoiding you,    but then as we had more interactions,      I couldn't stop myself from falling.      It feels heavy trying to keep these feelings to myself because I couldn't even tell anyone about this.      Me and the girl that likes you too are in the same circle of friends,      you know who hehe.      But yeah, it's hard to act like this in front of you,      it's hard not to be able to admit my feelings for her own sake...   but then it got me thinking,      do I not deserve to express my own feeelings?     This wasn't the first time that this happened to me and I actually gave up my feelings the last time this happened.     Well, I could of course do the same thing again but this time, I want to atleast let you know about my feelings.     I don't want to just pretend I never liked you,         we both hate pretending don't we? AHAHAHAHAHAHAHAHAHAH. This confession took me weeks before I could finally persuade myself to confess pero sabi mo nga,     take the risk or lose the chance and it kept bothering me hearing you say that...   it felt like a sign for me to just forget about everything for a second and say what I truly feel..and I want to thank you with that because you made me feel allowed to share my feelings.      AAAAAAAAAAAAAA ANG CHEESY KO NAMAN PAKINGGAN AHAHAHAHAHAHAHAH PLEASE BARE WITH ME LODS.      Oh and if you're wondering why I liked you out of many people out there,      then you must be dumb for not realizing      djk.       Well, to me,      your imperfections makes you attractive.     Your smile,    those damn eyes,    your personality,    and just the way you express yourself overall are all the things I like about you.      I like the way you talk so passionately about your interests, I like our small chit-chats, and even your bluntness AHAHAHAHAHAHAHAH so to be honest,      it's everything about you.    What I mean is that,     I admire everything about you and I feel lucky enough to have the chance to know you.  Well... I also want you to know that I did not write this letter to get my feelings reciprocrated,    I just want to express my feelings and it's definitely okay if you straight up reject me,     I understand hehe.     I just hope that you still allow me to admire you,    that's enough for me and I'm contented with that.     I also apologize for not telling you right away,     I was afraid of how you'll react and of course I don't want to ruin things for us...   so I hope after reading this letter we still stay connected, haha it's like I'm already expecting a rejection huhu,      my bad I lack self-respect.      So um, as this year comes to an end, I want to express my sincere gratitude to you,    thanks for listening to my nonsense chikas even though it's none of your business AHAHAHAHAHAHAHAHAH,    our little chit-chats really complete my day especially our random deep talks T-T,    I hope we can continue to have them next year :PP.     Damn, it feels illegal to like you...   but if that's the case          then I guess you're my fav crime?       eme AHAHAHAHAHAHAH.   OK BUT IN ALL SERIOUSNESS, KEEP THIS BETWEEN US. Secret na natin to boss HEHEHEHE.      Aight, I guess this is it?   Hopefully you appreciate this letter though,    it's only one of the few times that I get to prioritize my feelings.       Ah and, I'm sorry if the website looks shitty, I just recently started to learn it huhu     thanks for taking your time to read this eitherway!! :). ";
+
+      function textTypingEffect2(element, texts, i = 0) {
+        if (i === 0) {
+          element.textContent = "";
+        }
+
+        element.textContent += texts[i];
+
+        //if we reached the end of the string
+        if (i === texts.length - 1) {
+          return;
+        }
+
+        setTimeout(() => textTypingEffect2(element, texts, i + 1), 40);
+      }
+
+      textTypingEffect2(divs, texts);
+    </script>
+  </body>
+</html>
